@@ -17,6 +17,8 @@ export class Notification {
       ...props,
       createdAt: props.createdAt ?? new Date()
     }
+    console.log(this.props);
+    
   }
 
   public set content(content: Content) {
