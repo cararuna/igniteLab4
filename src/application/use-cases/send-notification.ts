@@ -23,9 +23,12 @@ constructor(private notificationsRepository: NotificationsRepository){}
    category,
   });
 
+  await this.notificationsRepository.create(notification);
+
   return {
    notification,
   }
 
+  
  }
 }
