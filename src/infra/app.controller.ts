@@ -1,4 +1,4 @@
-import { CreateNotificationBody } from './create-notification-body';
+/* import { CreateNotificationBody } from './create-notification-body'; */
 import { PrismaService } from './prisma.service';
 import { Controller, Get, Post } from '@nestjs/common';
 import { Body } from '@nestjs/common/decorators';
@@ -12,7 +12,7 @@ export class AppController {
   }
 
   @Post()
-  async create(@Body() body: CreateNotificationBody) {
+  async create(@Body() body) {
     const { recipientId, content, category } = body;
     console.log(body);
 
